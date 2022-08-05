@@ -46,4 +46,8 @@ describe("test power function", () => {
         const result = power(3, 4);
         expect(result).toBe(81);
     })
+    it("3 in power of 0 to equal 1", () => {
+        const result = power(3, 0);
+        expect(result).toBe(1);
+    })
 });
