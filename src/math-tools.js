@@ -12,10 +12,16 @@ function abs(a) {
     } else return -a;
 }
 
-function power(a, b) {
-    let result = a
-    for (let i = 1; i < b; i++) {
-        result *= a;
+function power(a, b) { //только для неотрицательных показателей
+    let result = a;
+    if (b>0) {
+        for (let i = 1; i < b; i++) {
+            result *= a;
+        }
+    }else if (b == 0) {
+        result = 1;
+    }else {
+        result = undefined; //без корней
     }
     return result;
 }
